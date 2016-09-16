@@ -264,8 +264,12 @@ class SymbolIndex(object):
                     sub_path, from_symbol = sub_path[:i], '.'.join(sub_path[i + 1:])
                 except ValueError:
                     from_symbol = None
+
                 package_path = '.'.join(path + sub_path)
-                package_path, from_symbol = fixup(package_path, from_symbol)
+                if from_symbol is None:
+                    from_symbol = sub_path[0]
+                else:
+                    package_path, from_symbol = fixup(package_path, from_symbol)
                 scores.append((score * scale, package_path, from_symbol))
 
             for key, subscope in scope._tree.items():
