@@ -266,9 +266,7 @@ class SymbolIndex(object):
                     from_symbol = None
 
                 package_path = '.'.join(path + sub_path)
-                if from_symbol is None:
-                    from_symbol = sub_path[0]
-                else:
+                if symbol not in path:
                     package_path, from_symbol = fixup(package_path, from_symbol)
                 scores.append((score * scale, package_path, from_symbol))
 
