@@ -1,10 +1,8 @@
 import sys
+
 from setuptools import Command, find_packages, setup
 
-sys.path.insert(0, '.')
-import importmagic
-
-version = importmagic.__version__
+version = '0.2.0'
 
 
 class PyTest(Command):
@@ -17,7 +15,6 @@ class PyTest(Command):
         pass
 
     def run(self):
-        import sys
         import subprocess
         errno = subprocess.call([sys.executable, 'runtests.py'])
         raise SystemExit(errno)
