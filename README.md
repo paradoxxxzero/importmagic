@@ -1,3 +1,6 @@
+# This is a fork of the original project
+It includes python 3 relative import support and some fix for imports like `from datetime import datetime`
+
 # Import Magic [![image](https://secure.travis-ci.org/alecthomas/importmagic.png?branch=master)](https://travis-ci.org/alecthomas/importmagic)
 
 The goal of this package is to be able to automatically manage imports in Python. To that end it can:

@@ -24,13 +24,17 @@ class PyTest(Command):
 
 
 setup(
-    name='importmagic',
-    url='http://github.com/alecthomas/importmagic',
-    download_url='http://pypi.python.org/pypi/importmagic',
+    name='importmagic3',
+    url='https://github.com/paradoxxxzero/importmagic',
+    download_url='http://pypi.python.org/pypi/importmagic3',
     version=version,
     options=dict(egg_info=dict(tag_build='')),
-    description='Python Import Magic - automagically add, remove and manage imports',
-    long_description='See http://github.com/alecthomas/importmagic for details.',
+    description=(
+        'Fork of Python Import Magic - automagically add, remove and manage '
+        'imports.'
+    ),
+    long_description=
+    'See http://github.com/alecthomas/importmagic for details.',
     license='BSD',
     platforms=['any'],
     packages=find_packages(),
