@@ -85,7 +85,7 @@ Configuring import styles
 1. Using `importmagic.Imports`.
 
 ```python
-imports = importmagic.Imports.set_style(multiline='backslash', max_columns=80)
+imports = importmagic.Imports.set_style(multiline='backslash', max_columns=80, indent_with_tabs=True)
 ```
 
 `multiline` takes `backlslash` or `parentheses`.
@@ -99,6 +99,7 @@ Add configuration to setup.cfg
 [importmagic]
 multiline = 'parentheses'
 max_columns = 120
+indent_with_tabs = 1
 ```
 
 and pass root directory to importmagic
